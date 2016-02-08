@@ -1,0 +1,36 @@
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="#home">Home</a></li>
+  <li role="presentation"><a href="#about-me">About Me</a></li>
+  <li role="presentation"><a href="#projects">Portfolio</a></li>
+  <li role="presentation"><a href="#contact">Contact</a></li>
+</ul>
+
+<div id="home">
+  <h1>Zachary Okuhara</h1>
+  <h3></h3>
+</div>
+
+<div id="about-me">
+  <p>
+    stuff
+  </p>
+</div>
+
+
+<div id="projects">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <% @projects.each do |project| %>
+        <div class="thumbnail">
+          <h3><%= project.name %></h3>
+          <%= link_to project.name, project_details_path(id: project.id) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="contact">
+  Contact details</br>
+  GitHub Page
+</div>
